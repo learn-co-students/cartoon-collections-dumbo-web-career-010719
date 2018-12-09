@@ -12,12 +12,7 @@ end
 
 def find_the_cheese(snacks)
   cheese_types = ["cheddar", "gouda", "camembert"]
-  snacks.each do |snack|
-    cheese_types.each do |cheese|
-      if snack == cheese
-        return snack
-      end
-    end
+  snacks.find do |snack|
+    cheese_types.include?(snack)
   end
-  return nil
 end
